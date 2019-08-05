@@ -1,8 +1,8 @@
-before_install:
-  - chmod +x mvnw
-
 language: java
 jdk:
   - openjdk8
 after_success:
   - mvn jacoco:report coveralls:report
+
+before_install:
+  - chmod +x mvnw

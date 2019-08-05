@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: lsp-admin-service
+  data:
+    mongodb:
+      uri: mongodb://root:asdqwe123@ds259347.mlab.com:59347/lsp-admin
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+
+server:
+   port: 8780 # This is the default port anyway, but you can change it here
+
+security:
+  jwt:
+    token:
+      secret-key: secret-key
+      expire-length: 3000000
+      
+UserController:
+  signin: Authenticates user and returns its JWT token.
+  signup: Creates user and returns its JWT token
+  delete: Deletes specific user by username
+  search: Returns specific user by username
+  me: Returns current user's data

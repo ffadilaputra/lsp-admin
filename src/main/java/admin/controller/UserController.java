@@ -92,18 +92,6 @@ public class UserController {
             .body(res);
   }
 
-//  @PatchMapping(value = "/{username}")
-//  ResponseEntity<Response> update(@PathVariable("username") String username, @RequestBody @Validated User user){
-//    String nameOfCurrMethod = new Throwable().getStackTrace()[0].getMethodName();
-//    Response response = new Response();
-//    response.setService(this.getClass().getName() + nameOfCurrMethod);
-//    response.setMessage("Data Updated Successfully");
-//    response.setData(userService.updateByUsername(username,user));
-//    return ResponseEntity
-//            .status(HttpStatus.OK)
-//            .contentType(MediaType.APPLICATION_JSON)
-//            .body(response);
-//  }
   @PatchMapping(value = "/{_id}")
   ResponseEntity<Response> updateById(@PathVariable("_id") String id, @RequestBody @Validated User user){
     String nameOfCurrMethod = new Throwable().getStackTrace()[0].getMethodName();
